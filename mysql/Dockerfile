@@ -10,5 +10,6 @@ COPY modules.conf /etc/proftpd/modules.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 EXPOSE 21
+EXPOSE 49152-49407
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
