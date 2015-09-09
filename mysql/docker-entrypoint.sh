@@ -6,10 +6,10 @@ SQLBackend mysql
 SQLEngine on
 SQLAuthenticate users userset
 SQLAuthTypes Crypt
-SQLConnectInfo ${DBNAME}@db ${DBUSER} ${DBPASS}
+SQLConnectInfo ${DB_NAME}@${DB_HOST} ${DB_USER} ${DB_PASS}
 SQLDefaultUID $(id -u ftp)
 SQLDefaultGID $(id -g ftp)
 </IfModule>
 EOH
 
-exec proftpd --nodaemon
+exec /usr/sbin/proftpd --nodaemon
