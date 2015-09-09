@@ -9,6 +9,9 @@ COPY proftpd.conf /etc/proftpd/proftpd.conf
 COPY modules.conf /etc/proftpd/modules.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
+VOLUME ["/srv/ftp"]
+RUN chown ftp:nogroup /srv/ftp
+
 EXPOSE 21
 EXPOSE 49152-49407
 
